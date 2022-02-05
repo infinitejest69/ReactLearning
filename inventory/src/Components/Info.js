@@ -11,4 +11,9 @@ function Info(props){
     );
 }
 
+Info.defaultProps = {
+    Telphone: "No Number",
+    Name: "No Name" ,
+};
+
 export default Info;

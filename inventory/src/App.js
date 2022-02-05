@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <p>My First App</p>
       <Info Name="Jest" Telphone="012345 876596"/>
+      <Info />
     </div>
   );
 }

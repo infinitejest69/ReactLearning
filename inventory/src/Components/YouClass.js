@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 class YourInfo extends React.Component {
 constructor(props){
@@ -22,6 +23,11 @@ super(props)
 YourInfo.defaultProps = {
     Telphone: "No Number",
     Name: "No Name" ,
+  };
+
+  YourInfo.propTypes = {
+    Telphone: PropTypes.string,
+    Name: PropTypes.string,
   };
 
 

@@ -1,23 +1,27 @@
 import { useState } from "react";
 
-function SearchBar(props) {
+function Additem(props) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [type, setType] = useState("");
   const [brand, setBrand] = useState("");
 
-  const SearchButtonPressed = () => {
-    props.updateSearchParms({
+  const AddItemButtonPressed = () => {
+    props.addItem({
       name: name,
       price: price,
       type: type,
       brand: brand,
     });
+    setName("");
+    setPrice(0.0);
+    setType("");
+    setBrand("");
   };
 
   return (
     <div>
-      <h2>Filter Item</h2>
+      <h2>Add Item: </h2>
       <form>
         <label htmlFor="name-field">Name: </label>
         <input
@@ -47,12 +51,12 @@ function SearchBar(props) {
           value={brand}
           onChange={(e) => setBrand(e.target.value)}
         />
-        <button type="button" onClick={SearchButtonPressed}>
-          Search
+        <button type="button" onClick={AddItemButtonPressed}>
+          Add Item
         </button>
       </form>
     </div>
   );
 }
 
-export default SearchBar;
+export default Additem;

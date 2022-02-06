@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types"
 
+//Class based componenet with default props
 class YourInfo extends React.Component {
 constructor(props){
 super(props)

@@ -23,11 +23,11 @@ function ItemDisplay(props) {
               <th scope="col">Id</th>
               <th scope="col">Name</th>
               <th scope="col">Price</th>
-              <th scope="col">Brand</th>
               <th scope="col">Type</th>
+              <th scope="col">Brand</th>
             </tr>
           </thead>
-          <tbody> {props.items.map(showItem)}</tbody>
+          <tbody>{props.items.map(showItem)}</tbody>
         </table>
       </div>
     </div>

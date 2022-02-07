@@ -14,7 +14,7 @@ function Additem(props) {
       brand: brand,
     });
     setName("");
-    setPrice(0.0);
+    setPrice(0);
     setType("");
     setBrand("");
   };

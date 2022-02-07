@@ -1,17 +1,37 @@
 function ItemDisplay(props) {
   const showItem = (item) => {
     return (
-      <div>
-        <p>ID: {item.id}</p>
-        <p>Name: {item.name}</p>
-        <p>Price: {item.price}</p>
-        <p>Brand: {item.brand}</p>
-        <p>Type: {item.type}</p>
-      </div>
+      <tr>
+        <th scope="row">{item.id}</th>
+        <th>{item.name}</th>
+        <th>{item.price}</th>
+        <th>{item.brand}</th>
+        <th>{item.type}</th>
+      </tr>
     );
   };
 
-  return <div>{props.items.map(showItem)}</div>;
+  return (
+    <div className="container">
+      <div className="row">
+        <h2>Items</h2>
+      </div>
+      <div className="row">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Type</th>
+            </tr>
+          </thead>
+          <tbody> {props.items.map(showItem)}</tbody>
+        </table>
+      </div>
+    </div>
+  );
 }
 
 export default ItemDisplay;

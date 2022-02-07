@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "name": "test",
+      "price": "1.99",
+      "type": "myType",
+      "brand": "myBrand",
+      "id": 1
+    }
+  ]
+}

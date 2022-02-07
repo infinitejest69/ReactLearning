@@ -23,8 +23,6 @@ function App() {
     }
 
     for (const item of data) {
-      console.log("item");
-      console.log(item);
       if (filters.name !== "" && item.name !== filters.name) {
         continue;
       }
@@ -39,17 +37,26 @@ function App() {
       }
       filteredData.push(item);
     }
-    console.log("filteredData");
-    console.log(filteredData);
     return filteredData;
   };
 
   const addItem = (item) => {
     let items = data["items"];
-    item.id = items.length;
-    items.push(item);
-    setItems({ items: items });
-    console.log(data);
+
+    const requestOption = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    };
+
+    fetch("http://localhost:3000/items", requestOption)
+      .then((response) => response.json())
+      .then((data) => {
+        items.push(data);
+        setItems({ items: items });
+      });
   };
 
   return (

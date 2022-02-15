@@ -46,6 +46,22 @@ function App() {
     return filteredData;
   };
 
+  const deleteItems = (item) => {
+    const items = data["items"];
+    const requestOption = {
+      method: "DELETE",
+    };
+    fetch(`http://localhost:3000/items/${item.id}`, requestOption).then(
+      (response) => {
+        if (response.ok) {
+          const idx = items.indexOf(item);
+          items.splice(idx, 1);
+          setItems({ items: items });
+        }
+      }
+    );
+  };
+
   const addItem = (item) => {
     let items = data["items"];
 
@@ -71,7 +87,10 @@ function App() {
         <h1>My First App</h1>
       </div>
       <div className="row mt-3">
-        <ItemDisplay items={filterData(data["items"])} />
+        <ItemDisplay
+          deleteItems={deleteItems}
+          items={filterData(data["items"])}
+        />
       </div>
       <div className="row mt-3">
         <SearchBar updateSearchParms={updateFilters} />

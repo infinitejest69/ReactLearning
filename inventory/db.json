@@ -8,18 +8,18 @@
       "id": 1
     },
     {
-      "name": "TEst",
-      "price": "120",
+      "name": "Test",
+      "price": "1234",
       "type": "test",
-      "brand": "test",
-      "id": 2
+      "brand": "rest",
+      "id": 3
     },
     {
-      "name": "test",
-      "price": "111",
-      "type": "wfs`",
-      "brand": "sdsdv",
-      "id": 3
+      "name": "Testyes",
+      "price": "1112",
+      "type": "tesd",
+      "brand": "dadd",
+      "id": 4
     }
   ]
 }

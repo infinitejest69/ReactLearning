@@ -6,6 +6,20 @@
       "type": "myType",
       "brand": "myBrand",
       "id": 1
+    },
+    {
+      "name": "TEst",
+      "price": "120",
+      "type": "test",
+      "brand": "test",
+      "id": 2
+    },
+    {
+      "name": "test",
+      "price": "111",
+      "type": "wfs`",
+      "brand": "sdsdv",
+      "id": 3
     }
   ]
 }
